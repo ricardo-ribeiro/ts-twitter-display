@@ -11,13 +11,12 @@ The user must be able to make different request using the frontend interface tho
 
 #### The candidate will have to perform the following tasks:
 
-- [] Use Typescript for backend and frontend (the building processes can be separated though)
-- [] Provide a NodeJS backend endpoint that takes a user_id and returns a list of recent formatted tweets of that user
-- [] The solution to connect to Twitter is up to the candidate: tokens are provided below.
-- [] The user timeline endpoint is documented here
-- [] Provide a one-page frontend where the user can get at least three different user timelines
-- [] Also a refresh button to get up to date tweets for the same user
-- [] Tweets need to be presented in some ways that is not using Twitter provided cards if possible
+- [X] Use Typescript for backend and frontend (the building processes can be separated though)
+- [X] Provide a NodeJS backend endpoint that takes a user_id and returns a list of recent formatted tweets of that user
+- [X] The solution to connect to Twitter is up to the candidate: tokens are provided below. ```USING Twitter Node SDK``` The user timeline endpoint is documented here
+- [X] Provide a one-page frontend where the user can get at least three different user timelines
+- [X] Also a refresh button to get up to date tweets for the same user
+- [X] Tweets need to be presented in some ways that is not using Twitter provided cards if possible
 - [] Documentation of the choices made, the technologies used, and the steps to run the project
 
 
@@ -31,7 +30,7 @@ The user must be able to make different request using the frontend interface tho
 - []  Testing endpoints
 - [] Attention to code quality
 - Extra features such as:
-    - [] Twitter user handle autocompletion in frontend
+    - [X] Twitter user handle autocompletion in frontend
     - [] History of last requests (in database or using the browser local storage)
 
 
