@@ -6,8 +6,11 @@ A application to show twitter timelines with user search and autocompletition
 
 
 ![](./public/app-preview0.png)
+
 ![](./public/app-preview1.png)
+
 ![](./public/app-preview2.png)
+
 ![](./public/app-preview3.png)
 
 
