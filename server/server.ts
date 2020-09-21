@@ -49,6 +49,11 @@ app.get(
       })
       .catch((error) => {
         console.log(error);
+        if(error.code === "ETIMEDOUT"){
+          res.send(408).json({status:"Timed out"})
+        }else{
+          res.send(400).json({status:"Error with request"})
+        }
       });
   }
 );
