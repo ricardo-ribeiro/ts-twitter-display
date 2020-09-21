@@ -2,20 +2,30 @@
   "name": "ts-twitter-display",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9990",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
+    "@types/level-js": "^4.0.1",
+    "@types/lodash": "^4.14.161",
     "@types/node": "^12.12.62",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "@types/twitter": "^1.7.0",
+    "express": "^4.17.1",
+    "level": "^6.0.1",
+    "lodash": "^4.17.20",
     "react": "^16.13.1",
+    "react-bulma-components": "^3.4.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "typescript": "^3.7.5"
+    "timeago.js": "^4.0.2",
+    "twitter": "^1.7.1"
   },
   "scripts": {
+    "dev:server": "ts-node --project ./server.tsconfig.json server/server.ts",
+    "test:server": "jest ./server/*/*.test.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +45,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/express": "^4.17.8",
+    "@types/jest": "^24.9.1",
+    "dotenv": "^8.2.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.4.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.9.7"
   }
 }
