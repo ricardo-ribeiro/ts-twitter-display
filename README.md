@@ -5,8 +5,11 @@ A application to show twitter timelines with user search and autocompletition
 
 
 
+![](./public/app-preview0.png)
 ![](./public/app-preview1.png)
 ![](./public/app-preview2.png)
+![](./public/app-preview3.png)
+
 
 
 ## Dependencies
@@ -16,13 +19,12 @@ A application to show twitter timelines with user search and autocompletition
 - express -> Http Server Framework
 - jest -> Testing Framework
 - supertest -> Http Endpoint Testing
-- level -> Key Value Store
-- redis -> Key Value Store
+- redis -> Key Value Store - WIP
 - dotenv -> .env File Loader
 
 #### Frontend
 - react -> Functional UI Framework
-- lodash  -> Javascript Utilities Library
+- lodash  -> Javascript Utilities Library - Used For Debouncing AutoComplete User Search Requests
 - timeago.js -> Tiny 2kb Lib to format Time to Time ago
 - react-bulma-components -> Bulma UI Framework React Components
 - jest -> Default CRA Test Library
