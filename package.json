@@ -30,7 +30,8 @@
   },
   "scripts": {
     "dev:server": "ts-node --project ./server.tsconfig.json server/index.ts",
-    "test:server": "jest ./server/*/*.test.ts",
+    "test:server": "npx jest -i server/*/*.test.ts --config=server/jest.config.js --watch",
+    "start:prod": "npm run build; ts-node --project ./server.tsconfig.json server/index.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
