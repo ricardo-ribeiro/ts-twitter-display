@@ -95,6 +95,48 @@ This project was bootstrapped with [Create React App](./CRA-README.md).
 
 
 
+# Run Application in Dev Mode
+
+## Requirements:
+
+- Nodejs 10+
+- Docker
+- docker-compose
+
+1 - Install Dependencies
+```bash
+npm install
+```
+
+2 - Start the Redis Docker Container
+```bash
+docker-compose up &&
+```
+
+1 - Create and .env file at root of project with the following structure 
+```bash
+TWITTER_CONSUMER_KEY=____YOUR_TWITTER_CONSUMER_KEY_____
+TWITTER_CONSUMER_SECRET=____YOUR_TWITTER_CONSUMER_SECRET_____
+TWITTER_ACCESS_TOKEN_KEY=____YOUR_TWITTER_ACCESS_TOKEN_KEY______
+TWITTER_ACCESS_TOKEN_SECRET=___YOUR_TWITTER_ACCESS_TOKEN_SECRET____
+```
+
+2 - Run The Backend Server
+```bash
+npm run dev:server
+```
+
+3 - Run The Ui Frontend Dev Server
+```bash
+npm start
+```
+
+
+```
+NOTE: Requests in development mode are proxyed trough the react dev server to the backend server.
+```
+
+
 
 # Run Application in Dev Mode
 
@@ -116,25 +158,16 @@ docker-compose up &&
 
 1 - Create and .env file at root of project with the following structure 
 ```bash
-    TWITTER_CONSUMER_KEY=____YOUR_TWITTER_CONSUMER_KEY_____
-    TWITTER_CONSUMER_SECRET=____YOUR_TWITTER_CONSUMER_SECRET_____
-    TWITTER_ACCESS_TOKEN_KEY=____YOUR_TWITTER_ACCESS_TOKEN_KEY______
-    TWITTER_ACCESS_TOKEN_SECRET=___YOUR_TWITTER_ACCESS_TOKEN_SECRET____
+TWITTER_CONSUMER_KEY=____YOUR_TWITTER_CONSUMER_KEY_____
+TWITTER_CONSUMER_SECRET=____YOUR_TWITTER_CONSUMER_SECRET_____
+TWITTER_ACCESS_TOKEN_KEY=____YOUR_TWITTER_ACCESS_TOKEN_KEY______
+TWITTER_ACCESS_TOKEN_SECRET=___YOUR_TWITTER_ACCESS_TOKEN_SECRET____
 ```
 
 2 - Run The Backend Server
 ```bash
-npm run dev:server
+npm run start:prod
 ```
 
-3 - Run The Ui Frontend Dev Server
-```bash
-npm start
-```
-
-
-
-
-
-
+[UI URL](http://localhost:9990)
 

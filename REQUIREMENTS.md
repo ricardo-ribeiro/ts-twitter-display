@@ -17,7 +17,7 @@ The user must be able to make different request using the frontend interface tho
 - [X] Provide a one-page frontend where the user can get at least three different user timelines
 - [X] Also a refresh button to get up to date tweets for the same user
 - [X] Tweets need to be presented in some ways that is not using Twitter provided cards if possible
-- [] Documentation of the choices made, the technologies used, and the steps to run the project
+- [X] Documentation of the choices made, the technologies used, and the steps to run the project
 
 
 ## Optional goals
@@ -28,10 +28,10 @@ The user must be able to make different request using the frontend interface tho
 - [X] Using a backend framework such as Express
 - [X] Using a frontend framework such as React
 - []  Testing endpoints
-- [] Attention to code quality
+- [X] Attention to code quality
 - Extra features such as:
     - [X] Twitter user handle autocompletion in frontend
-    - [] History of last requests (in database or using the browser local storage)
+    - [X] History of last requests (in database or using the browser ___local storage___)
 
 
 
