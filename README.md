@@ -130,7 +130,7 @@ npm install
 
 2 - Start the Redis Docker Container
 ```bash
-docker-compose up &&
+docker-compose up redis &
 ```
 
 1 - Create and .env file at root of project with the following structure 
@@ -174,7 +174,7 @@ npm install
 
 2 - Start the Redis Docker Container
 ```bash
-docker-compose up &
+docker-compose up redis &
 ```
 
 1 - Create and .env file at root of project with the following structure 
@@ -192,3 +192,25 @@ npm run start:prod
 
 [UI URL](http://localhost:9990)
 
+
+
+
+
+# Run Application in Prod Docker Container Mode
+
+
+
+1 - Create and .env file at root of project with the following structure 
+```bash
+TWITTER_CONSUMER_KEY=____YOUR_TWITTER_CONSUMER_KEY_____
+TWITTER_CONSUMER_SECRET=____YOUR_TWITTER_CONSUMER_SECRET_____
+TWITTER_ACCESS_TOKEN_KEY=____YOUR_TWITTER_ACCESS_TOKEN_KEY______
+TWITTER_ACCESS_TOKEN_SECRET=___YOUR_TWITTER_ACCESS_TOKEN_SECRET____
+```
+
+2 - Start the Redis Docker Container And Twitt Application
+```bash
+docker-compose up  &
+```
+
+[UI URL](http://localhost:8080)

@@ -15,6 +15,7 @@ const {
   TWITTER_ACCESS_TOKEN_KEY,
   TWITTER_ACCESS_TOKEN_SECRET,
   PORT,
+  REDIS_HOST
 } = process.env;
 
 const twittClient = new TwitterClient({
@@ -24,7 +25,7 @@ const twittClient = new TwitterClient({
   access_token_secret: TWITTER_ACCESS_TOKEN_SECRET || "",
 });
 
-var redisCache = cacheRedisMiddleware({});
+var redisCache = cacheRedisMiddleware({host: REDIS_HOST || "localhost", port:6379});
 
 const server = new AppServer(
   { port: Number(PORT) || 9990 },

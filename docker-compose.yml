@@ -6,3 +6,12 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - 6379:6379
+  twitt:
+    build: ./
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - 8080:9990
+    depends_on: [redis]
+networks:
+    default:
