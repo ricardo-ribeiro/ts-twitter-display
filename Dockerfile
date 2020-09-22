@@ -5,4 +5,5 @@ RUN npm install
 COPY . .
 ENV REDIS_HOST=redis
 EXPOSE 9990
-CMD [ "npm","run", "start:prod" ]
+RUN npm run build
+CMD [ "npm","run", "start:server" ]
