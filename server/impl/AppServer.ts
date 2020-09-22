@@ -1,7 +1,7 @@
 import express from "express";
-import { ImplBaseController } from "./impl/ImplBaseController";
-import { IInjectables } from "./interfaces/IInjectables";
-import { IAppServerOptions } from "./interfaces/IAppServerOptions";
+import { ImplBaseController } from "../impl/ImplBaseController";
+import { IInjectables } from "../interfaces/IInjectables";
+import { IAppServerOptions } from "../interfaces/IAppServerOptions";
 
 export class AppServer {
   private app: express.Express;
