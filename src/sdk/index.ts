@@ -20,4 +20,4 @@ const getUsersForScreenName = (screen_name: string): Promise<IUser[]> =>
       });
   });
 
-  export {getTimelineForUser,getUsersForScreenName}
+  export { getTimelineForUser, getUsersForScreenName }
