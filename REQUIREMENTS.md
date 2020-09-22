@@ -27,7 +27,7 @@ The user must be able to make different request using the frontend interface tho
 
 - [X] Using a backend framework such as Express
 - [X] Using a frontend framework such as React
-- []  Testing endpoints
+- [X]  Testing endpoints
 - [X] Attention to code quality
 - Extra features such as:
     - [X] Twitter user handle autocompletion in frontend
