@@ -19,5 +19,16 @@ const getUsersForScreenName = (screen_name: string): Promise<IUser[]> =>
         reject(e);
       });
   });
+  
+  
+  const getLinkMeta = (link: string): Promise<{ title: string, description:string, image: string, favicon: string}> =>
+  new Promise((resolve, reject) => {
+    fetch(`/api/link/meta?link=${link}`)
+      .then((r: Response) => r.json())
+      .then((r: { title: string, description:string, image: string, favicon: string}) => resolve(r))
+      .catch((e: Error) => {
+        reject(e);
+      });
+  });
 
-  export { getTimelineForUser, getUsersForScreenName }
+  export { getTimelineForUser, getUsersForScreenName, getLinkMeta }

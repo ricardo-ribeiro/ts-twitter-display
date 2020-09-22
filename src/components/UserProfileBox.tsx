@@ -38,7 +38,7 @@ export const UserProfileBox = ({
             }}
           >
             <img
-              width={18}
+              width={15}
               src={
                 "https://www.flaticon.com/svg/static/icons/svg/545/545661.svg"
               }

@@ -1,23 +1,25 @@
 import React from "react";
-import { Navbar, Heading, Level, Image } from "react-bulma-components";
+import { Navbar, Heading, Image } from "react-bulma-components";
 export const NavigationBar = () => {
   return (
-    <Navbar style={{ backgroundColor: "rgb(42,95,245)" }}>
-      <Navbar.Brand renderAs="figure">
-        <Level style={{ paddingLeft: 5 }}>
-          <Level.Item>
-            <Image
-              size={32}
-              src={
-                "https://www.flaticon.com/svg/static/icons/svg/937/937552.svg"
-              }
-            ></Image>
-          </Level.Item>
-          <Level.Item>
-            <Heading style={{ color: "white" }}> Twitt</Heading>
-          </Level.Item>
-        </Level>
+    <Navbar color={"link"} style={{ backgroundColor: "rgb(42,95,245)" }} active>
+      <Navbar.Brand >
+        <Navbar.Item renderAs="a">
+          <img
+            style={{ maxHeight: "2.75rem" }}
+            src={"https://www.flaticon.com/svg/static/icons/svg/937/937552.svg"}
+            alt="Twitt"
+          />
+          <span style={{ marginLeft: 5 }}>Twitt</span>
+        </Navbar.Item>
+
+        <Navbar.Burger />
       </Navbar.Brand>
+      <Navbar.Container position="end">
+        <Navbar.Item onClick={() => window.location.reload()}>
+          Refresh All Timelines
+        </Navbar.Item>
+      </Navbar.Container>
     </Navbar>
   );
 };

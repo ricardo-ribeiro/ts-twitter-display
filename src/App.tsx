@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { Columns, Media, Menu, Image } from "react-bulma-components";
+import { Columns, Media, Menu, Image, Button } from "react-bulma-components";
 import "./App.css";
 import { InputWithAutoComplete } from "./components/InputWithAutoComplete";
 import { TwitterVerifierIcon } from "./components/TwitterVerifierIcon";
 import { TimelineContainer } from "./components/TimelineContainer";
 import { NavigationBar } from "./components/NavigationBar";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import { IUser } from "../interfaces/ITweet";
 
 function App() {
-  let [timelines, setTimelines] = useState<any[]>([]);
+  let [userTimeline, setUserTimeline]: [IUser[], Function] = useLocalStorage(
+    "tw_users",
+    []
+  );
   return (
     <div className="App">
       <header>
@@ -16,15 +21,24 @@ function App() {
       <main style={{ backgroundColor: "#fafafa" }}>
         <Columns multiline={false}>
           <Columns.Column size={2} style={{ borderRightStyle: "inset" }}>
-            <Menu style={{ marginLeft: 10, height: "calc(100vh - 70px)" }}>
-              <br></br>
+            <Menu
+              style={{
+                marginLeft: 10,
+                height: "calc(100vh - 70px)",
+                overflowY: "scroll",
+              }}
+            >
+              {/* <br></br> */}
+              <hr></hr>
               <Menu.List title="Search Users">
                 <InputWithAutoComplete
                   onUserSelected={(surser) =>
-                    setTimelines((ct) => [...ct, surser])
+                    setUserTimeline((ct) => [...ct, surser])
                   }
                 ></InputWithAutoComplete>
-                {timelines.map((timeline) => {
+              </Menu.List>
+              <Menu.List title={"Timelines"}>
+                {userTimeline.map((timeline) => {
                   return (
                     <Menu.List.Item>
                       <Media>
@@ -49,6 +63,19 @@ function App() {
                             ) : null}
                           </div>
                           @{timeline.screen_name}
+                        </Media.Item>
+                        <Media.Item position="right">
+                          <Button
+                            size={"small"}
+                            color={"white"}
+                            onClick={() => {
+                              setUserTimeline(
+                                userTimeline.filter((t) => t.id !== timeline.id)
+                              );
+                            }}
+                          >
+                            X
+                          </Button>
                         </Media.Item>
                       </Media>
                     </Menu.List.Item>
@@ -76,7 +103,7 @@ function App() {
                   fullhd: 2,
                 }}
               >
-                {timelines.map((user, index) => {
+                {userTimeline.map((user, index) => {
                   return <TimelineContainer user={user}></TimelineContainer>;
                 })}
               </Columns>

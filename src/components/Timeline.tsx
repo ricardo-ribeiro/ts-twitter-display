@@ -18,7 +18,7 @@ export const Timeline = ({
       })
       .catch((e) => {
         console.error("Error Loading Timeline");
-        alert("Error Loading Timeline - Refresh it please");
+        setLoadEpoch(Date.now())
       });
   }, [requestEpoch]);
   return (
