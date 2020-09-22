@@ -76,6 +76,8 @@ curl 'http://localhost:3000/api/link/meta?link=https://google.com' --compressed
 ```
 
 
+![](./public/backend-test-results.png)
+
 <br/>
 <br/>
 <br/>
@@ -131,6 +133,7 @@ npm run dev:server
 npm start
 ```
 
+[UI URL](http://localhost:3000)
 
 ```
 NOTE: Requests in development mode are proxyed trough the react dev server to the backend server.
@@ -138,7 +141,7 @@ NOTE: Requests in development mode are proxyed trough the react dev server to th
 
 
 
-# Run Application in Dev Mode
+# Run Application in "Prod" Mode
 
 ## Requirements:
 
