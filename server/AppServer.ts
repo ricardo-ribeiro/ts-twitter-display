@@ -28,7 +28,6 @@ export class AppServer {
     this.loadedControllers = this.controllers.map((Controller: any) => {
       return new Controller(this.injectables, this.app);
     });
-    // this.start();
   }
   public addHandler(method: string, path: string, handler: Function): void {
     this.app[method](
@@ -41,7 +40,7 @@ export class AppServer {
   }
   public start(): void {
     this.app.listen(this.port, () => {
-      console.log("app Started");
+      console.log("Application Server Started");
     });
   }
 }
