@@ -6,11 +6,29 @@ A application to show twitter timelines with user search and autocompletition
 
 ![](./public/app-preview0.png)
 
+UI Without Timelines Added yet
+
 ![](./public/app-preview1.png)
+
+Auto Completion for a twitter screen name
 
 ![](./public/app-preview2.png)
 
-![](./public/app-preview3.png)
+Added Timeline to Timelines
+
+![](./public/app-preview4.png)
+
+Added another Timeline to Timelines
+
+Timelines with Image and Video Tweets
+
+![](./public/app-preview6.png)
+
+Timelines with Link Meta Data Preview
+
+
+
+
 
 
 <br/>
@@ -156,7 +174,7 @@ npm install
 
 2 - Start the Redis Docker Container
 ```bash
-docker-compose up &&
+docker-compose up &
 ```
 
 1 - Create and .env file at root of project with the following structure 
